@@ -1,0 +1,36 @@
+{
+  "name": "%PACKAGE_NAME%",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "types": "index.d.ts",
+  "files": [
+    "%PACKAGE_NAME%.model.json",
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "clean": "rm -r %PACKAGE_NAME%.model.json index.d.ts index.js",
+    "build": "node build.js",
+    "doc:start": "yarn run build && cp %PACKAGE_NAME%.model.json doc/src && cd doc && yarn run start",
+    "doc:build": "yarn run build && cp %PACKAGE_NAME%.model.json doc/src && cd doc && yarn run build"
+  },
+  "repository": "git@github.com:%GITHUB_USER%/%PACKAGE_NAME%.git",
+  "homepage": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%#readme",
+  "bugs": {
+    "url": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%/issues"
+  },
+  "authors": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@incubateur-ademe/publicodes-tools": "^0.2.1"
+  },
+  "dependencies": {
+    "publicodes": "^1.0.0-beta.71"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

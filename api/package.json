@@ -1,0 +1,35 @@
+{
+  "name": "%PACKAGE_NAME%-api",
+  "version": "0.1.0",
+  "description": "",
+  "type": "module",
+  "main": "index.js",
+  "module": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "build": "node index.js"
+  },
+  "repository": "git@github.com:%GITHUB_USER%/%PACKAGE_NAME%.git",
+  "homepage": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%#readme",
+  "bugs": {
+    "url": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%/issues"
+  },
+  "authors": [],
+  "license": "MIT",
+  "devDependencies": {
+    "@incubateur-ademe/publicodes-tools": "^0.2.1",
+    "@publicodes/api": "^1.0.0-beta.71",
+    "nodemon": "^3.0.1"
+  },
+  "dependencies": {
+    "@koa/cors": "^4.0.0",
+    "@koa/router": "^12.0.0",
+    "koa": "^2.14.2",
+    "publicodes": "^1.0.0-beta.71"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
