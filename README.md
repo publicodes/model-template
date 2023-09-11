@@ -34,8 +34,9 @@ projet :
 - `%PACKAGE_NAME%` : nom du paquet npm / nom du repository GitHub
 - `%GITHUB_USER%` : nom d'utilisateur GitHub / organisation GitHub
 
-Pour utiliser les fonctionnalités de la CI, il faut ajouter les variables
-suivantes dans les secrets du repository GitHub :
+Pour utiliser les fonctionnalités de la CI. Il faut décommenter le fichier
+`./github/workflows/packaging.yaml` et ajouter les variables suivantes dans les
+secrets du repository GitHub :
 
 - `NPM_TOKEN` : token NPM pour publier le paquet sur [npmjs.com](https://npmjs.com)
 - `PAT` : Personal Access Token pour publier la documentation sur GitHub Pages
@@ -70,7 +71,7 @@ Utiliser certaines règles dans un autre modèle publicodes :
 importer!:
   depuis:
     nom: %PACKAGE_NAME% 
-    url: https://github.com/incubateur-ademe/modele-numerique
+    url: https://github.com/%GITHUB_USER%/%PACKAGE_NAME%
   dans: modèle numérique
   les règles:
     - numérique . internet . consommation horaire 
