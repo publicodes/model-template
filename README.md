@@ -43,10 +43,10 @@ suivantes dans les secrets du repository GitHub :
 Pour deployer la documentation sur GitHub Pages, il faut sélectionner la
 branche `gh-pages` dans les paramètres du repository.
 
-## Example de dépôts utilisant ce template
+## Exemples de dépôts utilisant ce template
 
-- [`@incubateur-ademe/modele-numerique`](https://github.com/incubateur-ademe/modele-numerique) -
-_Modèle Publicodes pour calculer l'impact (en CO2eq) du numérique_
+- [`@incubateur-ademe/publicodes-negaoctet`](https://github.com/incubateur-ademe/publicodes-negaoctet) --
+_Modèle Publicodes pour la base de données NegaOctet_
 
 ## Usage 
 
@@ -84,7 +84,7 @@ importer!:
 > Les règles publicodes du modèle sont disponible dans le workspace
 > [`rules/`](https://github.com/%GITHUB_USER%/%PACKAGE_NAME%/tree/main/rules).
 
-Pour installer les dépendences et compiler tous les fichiers `.publicodes` en
+Pour installer les dépendances et compiler tous les fichiers `.publicodes` en
 un seul fichier JSON, il suffit d'exécuter la commande suivante : 
 
 ```
