@@ -51,12 +51,12 @@ _Modèle Publicodes pour la base de données NegaOctet_
 
 ## Usage 
 
-Ajouter le paquet à vos dépendandes : 
+Ajouter le paquet à vos dépendances : 
 ```
 bun add %PACKAGE_NAME
 ```
 
-Instancier une nouveau moteur Publicode :
+Instancier un nouveau moteur Publicode :
 ```typescript
 import Engine from 'publicodes'
 import rules from '%PACKAGE_NAME%'
