@@ -52,7 +52,7 @@ _Modèle Publicodes pour calculer l'impact (en CO2eq) du numérique_
 
 Ajouter le paquet à vos dépendandes : 
 ```
-yarn add %PACKAGE_NAME
+bun add %PACKAGE_NAME
 ```
 
 Instancier une nouveau moteur Publicode :
@@ -88,7 +88,7 @@ Pour installer les dépendences et compiler tous les fichiers `.publicodes` en
 un seul fichier JSON, il suffit d'exécuter la commande suivante : 
 
 ```
-yarn && yarn run build
+bun && bun run build
 ```
 
 #### Lancer la documentation
@@ -100,9 +100,9 @@ Pour lancer l'app React en local permettant de parcourir la documentation du
 modèle, il suffit d'exécuter la commande suivante :
 
 ```
-yarn install --cwd doc
+bun i --cwd doc
 
-yarn run doc
+bun run doc
 ```
 
 #### Lancer l'API
@@ -114,10 +114,10 @@ Pour lancer le serveur Node permettant d'utiliser l'API REST, il faut utiliser l
 suivantes : 
 
 ```
-yarn run api
+bun run api
 
 # En watch-mode
-yarn run api:watch
+bun run api:watch
 ```
 
 ## Publier une nouvelle version

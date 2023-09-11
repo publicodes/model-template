@@ -4,7 +4,7 @@
   "private": true,
   "homepage": "https://%GITHUB_USER%.github.io/%PACKAGE_NAME%",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PUBLIC_URL=http://localhost:3000 react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"
   },
@@ -39,6 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "packageManager": "yarn@3.6.3"
+  }
 }

@@ -13,9 +13,9 @@
   ],
   "scripts": {
     "clean": "rm -r %PACKAGE_NAME%.model.json index.d.ts index.js",
-    "build": "node build.js",
-    "doc:start": "yarn run build && cp %PACKAGE_NAME%.model.json doc/src && cd doc && yarn run start",
-    "doc:build": "yarn run build && cp %PACKAGE_NAME%.model.json doc/src && cd doc && yarn run build"
+    "build": "bun run build.js",
+    "doc:start": "bun run build && cp %PACKAGE_NAME%.model.json doc/src && cd doc && bun run start",
+    "doc:build": "bun run build && cp %PACKAGE_NAME%.model.json doc/src && cd doc && bun run build"
   },
   "repository": "git@github.com:%GITHUB_USER%/%PACKAGE_NAME%.git",
   "homepage": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%#readme",
