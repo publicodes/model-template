@@ -53,7 +53,7 @@ _Modèle Publicodes pour la base de données NegaOctet_
 
 Ajouter le paquet à vos dépendances : 
 ```
-bun add %PACKAGE_NAME
+bun add %PACKAGE_NAME%
 ```
 
 Instancier un nouveau moteur Publicode :
