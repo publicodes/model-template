@@ -3,6 +3,7 @@ import "./App.css";
 import { RulePage } from "publicodes-react";
 import { Link, Route, Routes, useParams } from "react-router-dom";
 import { ComponentProps, useRef } from "react";
+import ReactMardown from "react-markdown";
 
 import model from "./%PACKAGE_NAME%.model.json";
 
@@ -16,6 +17,7 @@ function Documentation() {
   const url = useParams()["*"];
   const { current: renderers } = useRef({
     Link,
+    Text: ({ children }) => <ReactMardown children={children} />,
   } as ComponentProps<typeof RulePage>["renderers"]);
 
   return (
