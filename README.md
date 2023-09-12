@@ -34,19 +34,25 @@ projet :
 - `%PACKAGE_NAME%` : nom du paquet npm / nom du repository GitHub
 - `%GITHUB_USER%` : nom d'utilisateur GitHub / organisation GitHub
 
-Pour utiliser les fonctionnalités de la CI. Il faut décommenter le fichier
-`./github/workflows/packaging.yaml` et ajouter les variables suivantes dans les
-secrets du repository GitHub :
+Pour utiliser les fonctionnalités de la CI :
 
-- `NPM_TOKEN` : token NPM pour publier le paquet sur [npmjs.com](https://npmjs.com)
-- `PAT` : Personal Access Token pour publier la documentation sur GitHub Pages
+1. Il faut décommenter le fichier `./github/workflows/packaging.yaml`
+2. Ajouter les variables suivantes dans les secrets du repository GitHub :
+    - `NPM_TOKEN` : token NPM pour publier le paquet sur [npmjs.com](https://npmjs.com)
+    - `PAT` : Personal Access Token pour publier la documentation sur GitHub Pages
+![Screenshot from 2023-09-12 12-02-40](https://github.com/incubateur-ademe/publicodes-model-template/assets/44124798/a6fe53cc-5766-4541-8936-41d474ed0069)
+3. Aller dans les paramètres du repository GitHub et :
+    - modifier les droits des worflows
+![image](https://github.com/incubateur-ademe/publicodes-model-template/assets/44124798/cd7e37f9-0641-44f2-b968-79faa778b832)
+    - sélectionner la branche `gh-pages` dans les paramètres du repository
+![image](https://github.com/incubateur-ademe/publicodes-model-template/assets/44124798/77191750-12f1-4ab4-94a4-7447f1b77624)
 
-Pour deployer la documentation sur GitHub Pages, il faut sélectionner la
-branche `gh-pages` dans les paramètres du repository.
 
 ## Exemples de dépôts utilisant ce template
 
-- [`@incubateur-ademe/publicodes-negaoctet`](https://github.com/incubateur-ademe/publicodes-negaoctet) --
+- [`@incubateur-ademe/publicodes-commun`](https://github.com/incubateur-ademe/publicodes-commun) -
+_Ensemble de règles communes utilisées pour l'implémentation des modèles Publicodes de l'incubateur_
+- [`@incubateur-ademe/publicodes-negaoctet`](https://github.com/incubateur-ademe/publicodes-negaoctet) -
 _Modèle Publicodes pour la base de données NegaOctet_
 
 ## Usage 
