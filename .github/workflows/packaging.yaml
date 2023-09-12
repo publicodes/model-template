@@ -93,8 +93,14 @@ name: GitHub release and NPM publishing
 #         uses: oven-sh/setup-bun@v1
 #         with:
 #           bun-version: latest
-#       - run: bun i --frozen-lockfile
-#       - run: bun run build
-#       - run: npm publish
+#       - name: Setup .npmrc file to publish to npm
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: "18.x"
+#           registry-url: "https://registry.npmjs.org"
+#       - name: Install dependencies and build
+#         run: bun i --frozen-lockfile && bun run build
+#       - name: Publish to NPM
+#         run: npm publish
 #         env:
 #           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
