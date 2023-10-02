@@ -19,11 +19,11 @@ Template dépôt GitHub pour créer un paquet Publicodes.
 ## Fonctionnalités
 
 - 📦 compilation des règles publicodes en un seul fichier JSON grâce à
-[`@incubateur-ademe/publicodes-tools`](https://github.com/incubateur-ademe/publicodes-tools)
+  [`@incubateur-ademe/publicodes-tools`](https://github.com/incubateur-ademe/publicodes-tools)
 - 📖 documentation du modèle interactive disponible sur GitHub Pages grâce à
-[`@publicodes/react-ui`](https://publi.codes/docs/api/react-ui)
+  [`@publicodes/react-ui`](https://publi.codes/docs/api/react-ui)
 - 🚀 API REST pour utiliser le modèle dans une application grâce à
-[`@publicodes/api`](https://publi.codes/docs/api/api-rest)
+  [`@publicodes/api`](https://publi.codes/docs/api/api-rest)
 
 ## Initialisation
 
