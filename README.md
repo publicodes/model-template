@@ -113,7 +113,7 @@ modèle, il suffit d'exécuter la commande suivante :
 ```
 bun i --cwd doc
 
-bun run doc
+bun run doc:start
 ```
 
 #### Lancer l'API
