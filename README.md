@@ -34,6 +34,10 @@ projet :
 - `%PACKAGE_NAME%` : nom du paquet npm / nom du repository GitHub
 - `%GITHUB_USER%` : nom d'utilisateur GitHub / organisation GitHub
 
+Pour garantir une utilisation de la documentation sans erreur :
+
+- `%DEFAULT_RULE%` : nom de la règle à afficher par défaut dans la documentation en ligne
+
 Pour utiliser les fonctionnalités de la CI :
 
 1. Il faut décommenter les fichiers `./github/workflows/*.yaml`
