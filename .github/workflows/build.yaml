@@ -1,0 +1,19 @@
+name: Build rules
+# on:
+#   pull_request:
+#
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v3
+#         with:
+#           ref: ${{ github.ref }}
+#       - name: Set-up bun
+#         uses: oven-sh/setup-bun@v1
+#         with:
+#           bun-version: latest
+#       - name: Install dependencies and build
+#         run: bun i --frozen-lockfile
+#       - name: Build
+#         run: bun run build

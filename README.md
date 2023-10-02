@@ -36,7 +36,7 @@ projet :
 
 Pour utiliser les fonctionnalités de la CI :
 
-1. Il faut décommenter le fichier `./github/workflows/packaging.yaml`
+1. Il faut décommenter les fichiers `./github/workflows/*.yaml`
 2. Ajouter les variables suivantes dans les secrets du repository GitHub :
     - `NPM_TOKEN` : token NPM pour publier le paquet sur [npmjs.com](https://npmjs.com)
     - `PAT` : Personal Access Token pour publier la documentation sur GitHub Pages
