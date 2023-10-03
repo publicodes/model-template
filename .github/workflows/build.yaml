@@ -1,4 +1,4 @@
-name: Build rules
+# name: Build rules
 # on:
 #   pull_request:
 #

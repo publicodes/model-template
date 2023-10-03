@@ -1,4 +1,4 @@
-name: GitHub release and NPM publishing
+# name: GitHub release and NPM publishing
 # From: https://github.com/garronej/ts-ci
 # on:
 #   push:
