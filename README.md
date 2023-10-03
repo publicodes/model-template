@@ -61,14 +61,14 @@ Pour utiliser les fonctionnalités de la CI :
 Ajouter le paquet à vos dépendances :
 
 ```
-bun add %GITHUB_USER%/%PACKAGE_NAME%
+bun add %PACKAGE_NAME%
 ```
 
 Instancier un nouveau moteur Publicode :
 
 ```typescript
 import Engine from 'publicodes'
-import rules from '%GITHUB_USER%/%PACKAGE_NAME%'
+import rules from '%PACKAGE_NAME%'
 
 const engine = new Engine(rules)
 
