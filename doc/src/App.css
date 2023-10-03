@@ -1,6 +1,6 @@
 * {
-	--textColor: #2975d1;
-	--darkerColor: #333350;
+  --textColor: #2975d1;
+  --darkerColor: #333350;
 }
 
 .App {
@@ -19,8 +19,7 @@ header {
 
   background: linear-gradient(60deg, var(--darkColor) 0%, var(--color) 100%);
   padding: 0.6rem 1rem;
-  box-shadow:
-    0 1px 3px rgba(var(--rgbColor), 0.12),
+  box-shadow: 0 1px 3px rgba(var(--rgbColor), 0.12),
     0 1px 2px rgba(var(--rgbColor), 0.24);
   border-radius: 0.4rem;
 }
@@ -54,7 +53,7 @@ small {
   background: none;
 }
 
-li  &.active .content {
+li &.active .content {
   background-color: transparent;
 }
 

@@ -199,12 +199,7 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "France",
-          "Europe",
-          "Chine",
-          "USA"
-        ]
+        "possibilités": ["France", "Europe", "Chine", "USA"]
       }
     },
     "par défaut": "'France'"
@@ -237,17 +232,10 @@
       "variations": [
         {
           "si": {
-            "toutes ces conditions": [
-              "taille > 0",
-              "destinataires > 0"
-            ]
+            "toutes ces conditions": ["taille > 0", "destinataires > 0"]
           },
           "alors": {
-            "somme": [
-              "terminaux",
-              "transmission",
-              "data center"
-            ]
+            "somme": ["terminaux", "transmission", "data center"]
           }
         },
         {
@@ -305,10 +293,7 @@
   },
   "email . terminaux": {
     "formule": {
-      "somme": [
-        "construction",
-        "usage"
-      ]
+      "somme": ["construction", "usage"]
     }
   },
   "email . terminaux . construction": {
@@ -403,11 +388,7 @@
   },
   "email . transmission": {
     "formule": {
-      "somme": [
-        "émetteur",
-        "récepteur",
-        "redondances sauvegarde"
-      ]
+      "somme": ["émetteur", "récepteur", "redondances sauvegarde"]
     },
     "unité": "gCO2e"
   },
@@ -443,12 +424,7 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "fixe FR",
-          "mobile FR",
-          "fixe EU",
-          "mobile EU"
-        ]
+        "possibilités": ["fixe FR", "mobile FR", "fixe EU", "mobile EU"]
       }
     },
     "par défaut": "'fixe FR'"
@@ -485,12 +461,7 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "fixe FR",
-          "mobile FR",
-          "fixe EU",
-          "mobile EU"
-        ]
+        "possibilités": ["fixe FR", "mobile FR", "fixe EU", "mobile EU"]
       }
     },
     "par défaut": "'fixe FR'"
@@ -526,29 +497,20 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "fixe FR hors box",
-          "fixe EU hors box"
-        ]
+        "possibilités": ["fixe FR hors box", "fixe EU hors box"]
       }
     },
     "par défaut": "'fixe FR hors box'"
   },
   "email . data center": {
     "formule": {
-      "somme": [
-        "construction",
-        "usage"
-      ]
+      "somme": ["construction", "usage"]
     },
     "unité": "gCO2e"
   },
   "email . data center . construction": {
     "formule": {
-      "somme": [
-        "émetteur",
-        "récepteur"
-      ]
+      "somme": ["émetteur", "récepteur"]
     },
     "unité": "gCO2e"
   },
@@ -590,10 +552,7 @@
   },
   "email . data center . usage": {
     "formule": {
-      "somme": [
-        "émetteur",
-        "récepteur"
-      ]
+      "somme": ["émetteur", "récepteur"]
     },
     "unité": "gCO2e"
   },
@@ -633,10 +592,7 @@
         {
           "si": "taille > 0",
           "alors": {
-            "somme": [
-              "transmission",
-              "data center"
-            ]
+            "somme": ["transmission", "data center"]
           }
         },
         {
@@ -685,22 +641,14 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "fixe FR",
-          "mobile FR",
-          "fixe EU",
-          "mobile EU"
-        ]
+        "possibilités": ["fixe FR", "mobile FR", "fixe EU", "mobile EU"]
       }
     },
     "par défaut": "'fixe FR'"
   },
   "fichier . data center": {
     "formule": {
-      "somme": [
-        "construction",
-        "usage"
-      ]
+      "somme": ["construction", "usage"]
     },
     "unité": "gCO2e"
   },
@@ -775,11 +723,7 @@
             ]
           },
           "alors": {
-            "somme": [
-              "terminaux",
-              "transmission",
-              "data center"
-            ]
+            "somme": ["terminaux", "transmission", "data center"]
           }
         },
         {
@@ -849,10 +793,7 @@
   },
   "recherche web . terminaux": {
     "formule": {
-      "somme": [
-        "construction",
-        "usage"
-      ]
+      "somme": ["construction", "usage"]
     },
     "note": "Cette étape comprend : \n  - La sollicitation de l’ordinateur de l’utilisateur pendant la saisie de la requete (saisie des mots cles)\n  - La sollicitation de l’ordinateur de l’utilisateur pendant l’affichage de la page de resultats et la consultation des resultats\n"
   },
@@ -951,22 +892,14 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "fixe FR",
-          "mobile FR",
-          "fixe EU",
-          "mobile EU"
-        ]
+        "possibilités": ["fixe FR", "mobile FR", "fixe EU", "mobile EU"]
       }
     },
     "par défaut": "'fixe FR'"
   },
   "recherche web . data center": {
     "formule": {
-      "somme": [
-        "construction",
-        "usage"
-      ]
+      "somme": ["construction", "usage"]
     },
     "unité": "gCO2e",
     "note": "Cette étape comprend :\n  - Le traitement des informations relatives a la requete au sein du Data Center du moteur de recherche\n  - Reception et transfert des informations via le routeur et serveur d’entree du Data Center ;\n  - Transfert des informations via des switchs (ou concentrateurs) et des serveurs assurant les fonctions firewall ;\n  - Recherche des resultats de la requete par les serveurs de calculs qui consultent les donnees indexees par le moteur de recherche (hypotheses : meme caracteristiques techniques que les serveurs de messagerie). Ces serveurs ont pour mission de recuperer les documents stockes (au sein des unites de stockage du moteur de recherche) correspondant a la requete et de generer des extraits decrivant les resultats obtenus. Il est difficile d’estimer le nombre de serveurs sollicites pour cette tache. D’apres nos echanges avec notamment avec Alain Heurtebise de Messaging Architects, un ordre de grandeur de 1000 serveurs a ete retenu pour le scenario de reference.\n  - Le traitement des informations permettant le renvoi des resultats depuis le Data Center du moteur de recherche\n  - Traitement des informations fournies par les serveurs de calculs au niveau du serveur de traitement de donnees ;\n  - Transfert des informations via des switchs (ou concentrateurs) et des serveurs assurant les fonctions firewall ;\n  - Transfert des informations via le routeur et serveur d’entree du Data Center ;\n"
@@ -1018,11 +951,7 @@
         {
           "si": "durée > 0",
           "alors": {
-            "somme": [
-              "terminaux",
-              "transmission",
-              "data center"
-            ]
+            "somme": ["terminaux", "transmission", "data center"]
           }
         },
         {
@@ -1045,11 +974,7 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "SD",
-          "HD",
-          "ultra HD"
-        ]
+        "possibilités": ["SD", "HD", "ultra HD"]
       }
     },
     "par défaut": "'HD'"
@@ -1091,10 +1016,7 @@
   },
   "streaming . terminaux": {
     "formule": {
-      "somme": [
-        "construction",
-        "usage"
-      ]
+      "somme": ["construction", "usage"]
     },
     "unité": "gCO2e"
   },
@@ -1193,22 +1115,14 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "fixe FR",
-          "mobile FR",
-          "fixe EU",
-          "mobile EU"
-        ]
+        "possibilités": ["fixe FR", "mobile FR", "fixe EU", "mobile EU"]
       }
     },
     "par défaut": "'fixe FR'"
   },
   "streaming . data center": {
     "formule": {
-      "somme": [
-        "construction",
-        "usage"
-      ]
+      "somme": ["construction", "usage"]
     },
     "unité": "gCO2e"
   },
@@ -1381,12 +1295,7 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "France",
-          "Europe",
-          "Chine",
-          "USA"
-        ]
+        "possibilités": ["France", "Europe", "Chine", "USA"]
       }
     },
     "par défaut": "'France'"
@@ -1619,10 +1528,7 @@
   "ordinateur et écran": null,
   "ordinateur et écran . construction": {
     "formule": {
-      "somme": [
-        "ordinateur fixe . construction",
-        "écran . construction"
-      ]
+      "somme": ["ordinateur fixe . construction", "écran . construction"]
     },
     "unité": "gCO2e"
   },
@@ -1729,11 +1635,7 @@
         {
           "si": "durée > 0",
           "alors": {
-            "somme": [
-              "terminaux",
-              "transmission",
-              "data center"
-            ]
+            "somme": ["terminaux", "transmission", "data center"]
           }
         },
         {
@@ -1757,12 +1659,7 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "audio",
-          "SD",
-          "HD",
-          "ultra HD"
-        ]
+        "possibilités": ["audio", "SD", "HD", "ultra HD"]
       }
     },
     "par défaut": "'SD'"
@@ -1812,10 +1709,7 @@
   },
   "visio . terminaux": {
     "formule": {
-      "somme": [
-        "construction",
-        "usage"
-      ]
+      "somme": ["construction", "usage"]
     },
     "unité": "gCO2e"
   },
@@ -1917,22 +1811,14 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "fixe FR",
-          "mobile FR",
-          "fixe EU",
-          "mobile EU"
-        ]
+        "possibilités": ["fixe FR", "mobile FR", "fixe EU", "mobile EU"]
       }
     },
     "par défaut": "'fixe FR'"
   },
   "visio . data center": {
     "formule": {
-      "somme": [
-        "construction",
-        "usage"
-      ]
+      "somme": ["construction", "usage"]
     },
     "unité": "gCO2e"
   },
@@ -1977,10 +1863,7 @@
     "couleur": "#B53471",
     "icônes": "📺",
     "formule": {
-      "somme": [
-        "internet",
-        "appareils"
-      ]
+      "somme": ["internet", "appareils"]
     }
   },
   "numérique . internet": {
@@ -2018,12 +1901,7 @@
     "formule": {
       "une possibilité": {
         "choix obligatoire": "oui",
-        "possibilités": [
-          "achat neuf",
-          "faible",
-          "moyen",
-          "maximum"
-        ]
+        "possibilités": ["achat neuf", "faible", "moyen", "maximum"]
       }
     }
   },
