@@ -67,12 +67,12 @@ bun add %PACKAGE_NAME%
 Instancier un nouveau moteur Publicode :
 
 ```typescript
-import Engine from 'publicodes'
-import rules from '%PACKAGE_NAME%'
+import Engine from "publicodes"
+import rules from "%PACKAGE_NAME%"
 
 const engine = new Engine(rules)
 
-engine.evaluate('tablette . consommation en mode actif')
+engine.evaluate("tablette . consommation en mode actif")
 ```
 
 Utiliser certaines règles dans un autre modèle publicodes :

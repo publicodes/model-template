@@ -1,24 +1,24 @@
-import Engine from 'publicodes'
-import './App.css'
-import { RulePage } from 'publicodes-react'
-import { Link, Route, Routes, useParams } from 'react-router-dom'
-import { ComponentProps, useRef } from 'react'
-import ReactMardown from 'react-markdown'
+import Engine from "publicodes"
+import "./App.css"
+import { RulePage } from "publicodes-react"
+import { Link, Route, Routes, useParams } from "react-router-dom"
+import { ComponentProps, useRef } from "react"
+import ReactMardown from "react-markdown"
 
-import model from './%PACKAGE_NAME%.model.json'
+import model from "./%PACKAGE_NAME%.model.json"
 
 const engine = new Engine(model as {})
 
-const baseUrl = process.env.NODE_ENV === 'development' ? '' : '/%PACKAGE_NAME%'
+const baseUrl = process.env.NODE_ENV === "development" ? "" : "/%PACKAGE_NAME%"
 
-const defaultRule = '%DEFAULT_RULE%'
+const defaultRule = "%DEFAULT_RULE%"
 
 function Documentation() {
-  const url = useParams()['*']
+  const url = useParams()["*"]
   const { current: renderers } = useRef({
     Link,
     Text: ({ children }) => <ReactMardown children={children} />,
-  } as ComponentProps<typeof RulePage>['renderers'])
+  } as ComponentProps<typeof RulePage>["renderers"])
 
   return (
     <div>
@@ -27,8 +27,8 @@ function Documentation() {
         rulePath={url ?? defaultRule}
         engine={engine}
         renderers={renderers}
-        language={'fr'}
-        npmPackage='%PACKAGE_NAME%'
+        language={"fr"}
+        npmPackage="%PACKAGE_NAME%"
       />
     </div>
   )
@@ -51,7 +51,7 @@ function Landing() {
 
 export default function App() {
   return (
-    <div className='App'>
+    <div className="App">
       <Routes>
         <Route path={`${baseUrl}/`} element={<Landing />} />
         <Route path={`${baseUrl}/doc/*`} element={<Documentation />} />
