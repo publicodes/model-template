@@ -1,36 +1,34 @@
 {
   "name": "%PACKAGE_NAME%",
   "version": "0.1.0",
-  "description": "",
-  "type": "module",
+  "repository": "git@github.com:%GITHUB_USER%/%PACKAGE_NAME%.git",
   "main": "index.js",
   "module": "index.js",
-  "types": "index.d.ts",
+  "devDependencies": {
+    "@incubateur-ademe/publicodes-tools": "^0.4.2",
+    "publicodes": "^1.0.0-beta.77"
+  },
+  "authors": [],
+  "bugs": {
+    "url": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%/issues"
+  },
+  "description": "",
   "files": [
     "%PACKAGE_NAME%.model.json",
     "index.js",
     "index.d.ts"
   ],
+  "homepage": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%#readme",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "clean": "rm -r %PACKAGE_NAME%.model.json index.d.ts index.js",
     "build": "bun run build.js",
     "doc:start": "bun run build && cp %PACKAGE_NAME%.model.json doc/src && cd doc && bun run start",
     "doc:build": "bun run build && cp %PACKAGE_NAME%.model.json doc/src && cd doc && bun run build"
   },
-  "repository": "git@github.com:%GITHUB_USER%/%PACKAGE_NAME%.git",
-  "homepage": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%#readme",
-  "bugs": {
-    "url": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%/issues"
-  },
-  "authors": [],
-  "license": "MIT",
-  "devDependencies": {
-    "@incubateur-ademe/publicodes-tools": "latest"
-  },
-  "dependencies": {
-    "publicodes": "^1.0.0-beta.71"
-  },
-  "publishConfig": {
-    "access": "public"
-  }
+  "type": "module",
+  "types": "index.d.ts"
 }
