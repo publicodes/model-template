@@ -3,11 +3,11 @@
 	<big>Publicodes Package Template</big>
   </h3>
   <p align="center">
-   <a href="https://github.com/incubateur-ademe/publicodes-model-template/issues">Report Bug</a>
+   <a href="https://github.com/publicodes/model-template/issues">Report Bug</a>
    •
-   <a href="https://incubateur-ademe.github.io/publicodes-model-template/">API docs</a>
+   <a href="https://publicodes.github.io/model-template/">API docs</a>
    •
-   <a href="https://github.com/incubateur-ademe/publicodes-model-template/blob/master/CONTRIBUTING.md">Contribute</a>
+   <a href="https://github.com/publicodes/model-template/blob/master/CONTRIBUTING.md">Contribute</a>
    •
    <a href="https://publi.codes">Publicodes</a>
   </p>
@@ -19,7 +19,7 @@ Template dépôt GitHub pour créer un paquet Publicodes.
 ## Fonctionnalités
 
 - 📦 compilation des règles publicodes en un seul fichier JSON grâce à
-  [`@incubateur-ademe/publicodes-tools`](https://github.com/incubateur-ademe/publicodes-tools)
+  [`@incubateur-ademe/publicodes-tools`](https://github.com/publicodes/publicodes-tools)
 - 📖 documentation du modèle interactive disponible sur GitHub Pages grâce à
   [`@publicodes/react-ui`](https://publi.codes/docs/api/react-ui)
 - 🚀 API REST pour utiliser le modèle dans une application grâce à
