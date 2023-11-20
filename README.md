@@ -135,3 +135,9 @@ bun run api:watch
 
 Afin de publier une nouvelle version il suffit d'exécuter la commande `npm
 version`.
+
+## Exemple de dépôt utilisant ce template
+
+- [`@incubateur-ademe/publicodes-impact-livraison`](https://github.com/incubateur-ademe/publicodes-impact-livraison)
+- [`@incubateur-ademe/publicodes-negaoctet`](https://github.com/incubateur-ademe/publicodes-negaoctet)
+- [`@incubateur-ademe/publicodes-commun`](https://github.com/incubateur-ademe/publicodes-commun)
