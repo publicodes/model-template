@@ -1,5 +1,5 @@
 node_modules
 .yarn
-%PACKAGE_NAME%.model.json
+model-template.model.json
 index.d.ts
 index.js

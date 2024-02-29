@@ -1,5 +1,5 @@
 {
-  "name": "%PACKAGE_NAME%-api",
+  "name": "model-template-api",
   "version": "0.1.0",
   "description": "",
   "type": "module",
@@ -9,25 +9,22 @@
     "index.js"
   ],
   "scripts": {
-    "build": "bun run index.js"
+    "start": "node server.js"
   },
-  "repository": "git@github.com:%GITHUB_USER%/%PACKAGE_NAME%.git",
-  "homepage": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%#readme",
+  "repository": "git@github.com:publicodes/model-template.git",
+  "homepage": "https://github.com/publicodes/model-template#readme",
   "bugs": {
-    "url": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%/issues"
+    "url": "https://github.com/publicodes/model-template/issues"
   },
   "authors": [],
   "license": "MIT",
-  "devDependencies": {
-    "@incubateur-ademe/publicodes-tools": "^0.2.1",
-    "@publicodes/api": "^1.0.0-beta.71",
-    "nodemon": "^3.0.1"
-  },
+  "devDependencies": {},
   "dependencies": {
     "@koa/cors": "^4.0.0",
     "@koa/router": "^12.0.0",
+    "@publicodes/rest-api": "^1.1.0",
     "koa": "^2.14.2",
-    "publicodes": "^1.0.0-beta.71"
+    "publicodes": "^1.1.0"
   },
   "publishConfig": {
     "access": "public"

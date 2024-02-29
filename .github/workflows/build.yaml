@@ -1,19 +1,52 @@
-# name: Build rules
-# on:
-#   pull_request:
-#
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     steps:
-#       - uses: actions/checkout@v3
-#         with:
-#           ref: ${{ github.ref }}
-#       - name: Set-up bun
-#         uses: oven-sh/setup-bun@v1
-#         with:
-#           bun-version: latest
-#       - name: Install dependencies and build
-#         run: bun i --frozen-lockfile
-#       - name: Build
-#         run: bun run build
+name: Build rules
+on:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "yarn"
+
+      - id: install
+        name: Install dependencies
+        run: yarn install --immutable
+
+      - id: build
+        name: Compile the rules
+        run: yarn build
+
+  deploy_gh_page:
+    runs-on: ubuntu-latest
+    needs:
+      - build
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          ref: ${{ github.ref }}
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: "yarn"
+
+      - id: install
+        name: Install dependencies
+        run: yarn install --immutable && yarn install --immutable --cwd doc
+
+      - id: doc:build
+        name: Build the documentation
+        run: yarn doc:build
+      - name: Deploy
+        uses: crazy-max/ghaction-github-pages@v3
+        with:
+          target_branch: gh-pages
+          build_dir: doc/build
+          jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -31,12 +31,8 @@ Pour utiliser ce template, il suffit de cliquer sur le bouton `Use this
 template`. Puis de remplacer les variables suivantes dans tous les fichiers du
 projet :
 
-- `%PACKAGE_NAME%` : nom du paquet npm / nom du repository GitHub
-- `%GITHUB_USER%` : nom d'utilisateur GitHub / organisation GitHub
-
-Pour garantir une utilisation de la documentation sans erreur :
-
-- `%DEFAULT_RULE%` : nom de la règle à afficher par défaut dans la documentation en ligne
+- `model-template` : nom du paquet npm / nom du repository GitHub
+- `publicodes` : nom d'utilisateur GitHub / organisation GitHub
 
 Pour utiliser les fonctionnalités de la CI :
 
@@ -55,24 +51,26 @@ Pour utiliser les fonctionnalités de la CI :
   _Modèle Publicodes pour la base de données NegaOctet_
 - [`@incubateur-ademe/publicodes-impact-livraison`](https://github.com/incubateur-ademe/publicodes-negaoctet) -
   _Modèle [Publicodes](https://publi.codes) pour le simulateur [Impact Livraison](https://impactco2.fr/livraison)_
+- [`ekofest/publicodes-evenements`](https://github.com/ekofest/publicodes-evenements) -
+  _Modèle Publicodes pour le calcul de l'impact environnemental des événements_
 
 ## Usage
 
 Ajouter le paquet à vos dépendances :
 
 ```
-bun add %PACKAGE_NAME%
+yarn add model-template
 ```
 
 Instancier un nouveau moteur Publicode :
 
 ```typescript
 import Engine from "publicodes"
-import rules from "%PACKAGE_NAME%"
+import rules from "model-template"
 
 const engine = new Engine(rules)
 
-engine.evaluate("tablette . consommation en mode actif")
+engine.evaluate("dépenses primeur")
 ```
 
 Utiliser certaines règles dans un autre modèle publicodes :
@@ -80,12 +78,12 @@ Utiliser certaines règles dans un autre modèle publicodes :
 ```yaml
 importer!:
   depuis:
-    nom: %PACKAGE_NAME%
-    url: https://github.com/%GITHUB_USER%/%PACKAGE_NAME%
-  dans: modèle numérique
+    nom: model-template
+    url: https://github.com/publicodes/model-template
   les règles:
-    - numérique . internet . consommation horaire
-    - ordinateur portable . construction
+    - prix . carottes
+    - prix . carottes
+    - prix . avocats
 ```
 
 ### En local
@@ -93,51 +91,46 @@ importer!:
 #### Compiler le modèle
 
 > Les règles publicodes du modèle sont disponible dans le workspace
-> [`rules/`](https://github.com/%GITHUB_USER%/%PACKAGE_NAME%/tree/main/rules).
+> [`rules/`](https://github.com/publicodes/model-template/tree/main/rules).
 
 Pour installer les dépendances et compiler tous les fichiers `.publicodes` en
 un seul fichier JSON, il suffit d'exécuter la commande suivante :
 
 ```
-bun && bun run build
+yarn
+
+yarn build
 ```
 
 #### Lancer la documentation
 
 > Le code de la documentation est disponible dans le workspace
-> [`doc/`](https://github.com/%GITHUB_USER%/%PACKAGE_NAME%/tree/main/doc).
+> [`doc/`](https://github.com/publicodes/model-template/tree/main/doc).
 
 Pour lancer l'app React en local permettant de parcourir la documentation du
 modèle, il suffit d'exécuter la commande suivante :
 
 ```
-bun i --cwd doc
+yarn install --cwd doc
 
-bun run doc:start
+yarn doc
 ```
 
 #### Lancer l'API
 
 > Le code de l'API est disponible dans le workspace
-> [`api/`](https://github.com/%GITHUB_USER%/%PACKAGE_NAME%/tree/main/api).
+> [`api/`](https://github.com/publicodes/model-template/tree/main/api).
 
 Pour lancer le serveur Node permettant d'utiliser l'API REST, il faut utiliser les commandes
 suivantes :
 
 ```
-bun run api
+yarn install --cwd api
 
-# En watch-mode
-bun run api:watch
+yarn api
 ```
 
 ## Publier une nouvelle version
 
 Afin de publier une nouvelle version il suffit d'exécuter la commande `npm
 version`.
-
-## Exemple de dépôt utilisant ce template
-
-- [`@incubateur-ademe/publicodes-impact-livraison`](https://github.com/incubateur-ademe/publicodes-impact-livraison)
-- [`@incubateur-ademe/publicodes-negaoctet`](https://github.com/incubateur-ademe/publicodes-negaoctet)
-- [`@incubateur-ademe/publicodes-commun`](https://github.com/incubateur-ademe/publicodes-commun)

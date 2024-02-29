@@ -1,34 +1,39 @@
 {
-  "name": "%PACKAGE_NAME%",
+  "name": "model-template",
   "version": "0.1.0",
-  "repository": "git@github.com:%GITHUB_USER%/%PACKAGE_NAME%.git",
-  "main": "index.js",
-  "module": "index.js",
-  "devDependencies": {
-    "@incubateur-ademe/publicodes-tools": "^0.4.2",
-    "publicodes": "^1.0.0-beta.77"
-  },
-  "authors": [],
-  "bugs": {
-    "url": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%/issues"
-  },
+  "repository": "git@github.com:publicodes/model-template.git",
+  "homepage": "https://github.com/publicodes/model-template#readme",
   "description": "",
+  "authors": [
+    "Emile Rolley <emile.rolley@tuta.io>"
+  ],
+  "bugs": {
+    "url": "https://github.com/publicodes/model-template/issues"
+  },
   "files": [
-    "%PACKAGE_NAME%.model.json",
+    "model-template.model.json",
     "index.js",
     "index.d.ts"
   ],
-  "homepage": "https://github.com/%GITHUB_USER%/%PACKAGE_NAME%#readme",
+  "main": "index.js",
+  "module": "index.js",
+  "type": "module",
+  "types": "index.d.ts",
+  "scripts": {
+    "clean": "rm -r model-template.model.json index.d.ts index.js",
+    "build": "node build.js",
+    "api": "cd api && yarn start",
+    "doc": "yarn run build && cd doc && yarn run dev",
+    "doc:build": "yarn run build && cd doc && yarn run build"
+  },
+  "devDependencies": {
+    "@publicodes/tools": "^1.0.5"
+  },
+  "peerDependencies": {
+    "publicodes": "^1.1.0"
+  },
   "license": "MIT",
   "publishConfig": {
     "access": "public"
-  },
-  "scripts": {
-    "clean": "rm -r %PACKAGE_NAME%.model.json index.d.ts index.js",
-    "build": "bun run build.js",
-    "doc:start": "bun run build && cp %PACKAGE_NAME%.model.json doc/src && cd doc && bun run start",
-    "doc:build": "bun run build && cp %PACKAGE_NAME%.model.json doc/src && cd doc && bun run build"
-  },
-  "type": "module",
-  "types": "index.d.ts"
+  }
 }

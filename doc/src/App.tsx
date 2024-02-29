@@ -1,17 +1,22 @@
 import Engine from "publicodes"
 import "./App.css"
-import { RulePage } from "publicodes-react"
+import { RulePage } from "@publicodes/react-ui"
 import { Link, Route, Routes, useParams } from "react-router-dom"
 import { ComponentProps, useRef } from "react"
 import ReactMardown from "react-markdown"
 
-import model from "./%PACKAGE_NAME%.model.json"
+// Import the model from the compiled JSON file
+import model from "../../model-template.model.json"
 
-const engine = new Engine(model as {})
+// Instantiate the publicodes engine with the model
+const engine = new Engine(model)
 
-const baseUrl = process.env.NODE_ENV === "development" ? "" : "/%PACKAGE_NAME%"
+// The base URL of the application (in production, the app is served from a subdirectory of
+// the github pages repository, so we need to prefix all the URLs with the subdirectory)
+const baseUrl = process.env.NODE_ENV === "development" ? "" : "/model-template"
 
-const defaultRule = "%DEFAULT_RULE%"
+// The default rule to display when the user lands on the documentation
+const defaultRule = "dépenses primeur"
 
 function Documentation() {
   const url = useParams()["*"]
@@ -25,10 +30,11 @@ function Documentation() {
       <RulePage
         documentationPath={`${baseUrl}/doc`}
         rulePath={url ?? defaultRule}
+        searchBar={true}
         engine={engine}
         renderers={renderers}
         language={"fr"}
-        npmPackage="%PACKAGE_NAME%"
+        npmPackage="model-template"
       />
     </div>
   )
