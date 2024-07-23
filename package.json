@@ -28,7 +28,7 @@
     "postinstall": "yarn --cwd doc install"
   },
   "devDependencies": {
-    "@publicodes/tools": "^1.2.2"
+    "@publicodes/tools": "^1.2.4"
   },
   "peerDependencies": {
     "publicodes": "^1.4.0"
