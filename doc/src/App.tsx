@@ -5,8 +5,8 @@ import { Link, Route, Routes, useParams } from "react-router-dom"
 import { ComponentProps, useRef } from "react"
 import ReactMardown from "react-markdown"
 
-// Import the model from the compiled JSON file
-import model from "../../model-template.model.json"
+// Import the model from the compiled model
+import model from "../../index"
 
 // Instantiate the publicodes engine with the model
 const engine = new Engine(model)
