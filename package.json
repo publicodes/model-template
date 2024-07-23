@@ -24,7 +24,8 @@
     "build": "node build.js",
     "api": "cd api && yarn start",
     "doc": "yarn run build && cd doc && yarn run dev",
-    "doc:build": "yarn run build && cd doc && yarn run build"
+    "doc:build": "yarn run build && cd doc && yarn run build",
+    "postinstall": "yarn --cwd doc install"
   },
   "devDependencies": {
     "@publicodes/tools": "^1.2.2"
