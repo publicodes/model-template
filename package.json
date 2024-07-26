@@ -15,9 +15,9 @@
     "index.js",
     "index.d.ts"
   ],
+  "type": "module",
   "main": "index.js",
   "module": "index.js",
-  "type": "module",
   "types": "index.d.ts",
   "scripts": {
     "clean": "rm -r model-template.model.json index.d.ts index.js",
@@ -28,7 +28,7 @@
     "postinstall": "yarn --cwd doc install"
   },
   "devDependencies": {
-    "@publicodes/tools": "^1.2.4"
+    "@publicodes/tools": "^1.2.5"
   },
   "peerDependencies": {
     "publicodes": "^1.4.0"
