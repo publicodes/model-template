@@ -3,3 +3,4 @@ node_modules
 model-template.model.json
 index.d.ts
 index.js
+dist
