@@ -37,10 +37,19 @@ projet :
 Pour utiliser les fonctionnalités de la CI :
 
 1. Il faut décommenter les fichiers `./github/workflows/*.yaml`
-2. Ajouter les variables suivantes dans les secrets du repository GitHub : - `NPM_TOKEN` : token NPM pour publier le paquet sur [npmjs.com](https://npmjs.com) - `PAT` : Personal Access Token pour publier la documentation sur GitHub Pages
+2. Ajouter les variables suivantes dans les secrets du repository GitHub :
+   - `NPM_TOKEN` : token NPM pour publier le paquet sur [npmjs.com](https://npmjs.com)
+   - `PAT` : Personal Access Token pour publier la documentation sur GitHub Pages
+
    ![Screenshot from 2023-09-12 12-02-40](https://github.com/incubateur-ademe/publicodes-model-template/assets/44124798/a6fe53cc-5766-4541-8936-41d474ed0069)
-3. Aller dans les paramètres du repository GitHub et : - modifier les droits des worflows
-   ![image](https://github.com/incubateur-ademe/publicodes-model-template/assets/44124798/cd7e37f9-0641-44f2-b968-79faa778b832) - sélectionner la branche `gh-pages` dans les paramètres du repository
+
+3. Aller dans les paramètres du repository GitHub et :
+   - modifier les droits des worflows
+
+   ![image](https://github.com/incubateur-ademe/publicodes-model-template/assets/44124798/cd7e37f9-0641-44f2-b968-79faa778b832)
+
+   - sélectionner la branche `gh-pages` dans les paramètres du repository
+
    ![image](https://github.com/incubateur-ademe/publicodes-model-template/assets/44124798/77191750-12f1-4ab4-94a4-7447f1b77624)
 
 ## Exemples de dépôts utilisant ce template
