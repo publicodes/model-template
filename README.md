@@ -1,4 +1,10 @@
 <div align="center">
+  <h2> 
+
+⚠️ **Ce template est déprécié, nous vous conseillons d'utiliser la commande [`npx @publicodes/tools init`](https://publi.codes/docs/guides/creer-un-modele#1-initialiser-un-projet-publicodes) à la place.** ⚠️
+  
+  </h2>
+ 
   <h3 align="center">
 	<big>Publicodes Package Template</big>
   </h3>
